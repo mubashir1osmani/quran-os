@@ -16,10 +16,8 @@ fn print(msg: []const u8) void {
 }
 
 export fn _start() callconv(.C) noreturn {
-    // Print welcome message
     print("iPodOS ARM64 Bootloader v0.1\n");
-    
-    // Halt the CPU
+
     while (true) {
         asm volatile ("wfe");
     }

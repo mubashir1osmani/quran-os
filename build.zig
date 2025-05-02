@@ -31,9 +31,12 @@ pub fn build(b: *std.Build) void {
     // Create run command for QEMU
     const run_cmd = b.addSystemCommand(&[_][]const u8{
         "qemu-system-aarch64",
-        "-M", "virt",
-        "-cpu", "cortex-a53",
-        "-kernel", "zig-out/bin/bootloader",
+        "-M",
+        "virt",
+        "-cpu",
+        "cortex-a53",
+        "-kernel",
+        "zig-out/bin/bootloader",
         "-nographic",
     });
 
